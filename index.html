@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Aklilu Tesfay - Software Engineer Portfolio | Antigravity AI">
+    <meta name="author" content="Aklilu Tesfay">
+    <meta name="theme-color" content="#0B0B2A">
+    <title>Aklilu Tesfay | Antigravity AI Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Aklilu Tesfay</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#roadmaps" class="nav-link">Roadmaps</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="glow-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Aklilu Tesfay</span>
+            </h1>
+            <p class="hero-subtitle">Software Engineer | Full-Stack Developer | AI Enthusiast</p>
+            <p class="hero-description">
+                I build applications that defy gravity - seamless, scalable, and intelligent.
+                Download my free developer roadmaps and start your journey today.
+            </p>
+            <div class="hero-buttons">
+                <a href="#roadmaps" class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download Roadmaps
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmaps Section -->
+    <section id="roadmaps" class="roadmaps">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-map"></i>
+                My Developer Roadmaps
+            </h2>
+            <p class="section-subtitle">Free resources I created to help you become a developer</p>
+            
+            <div class="roadmaps-grid" id="roadmapsGrid">
+                <!-- Website Development Card -->
+                <div class="roadmap-card" data-pdf="pdfs/website_roadmap.pdf">
+                    <div class="card-icon">🌐</div>
+                    <h3>Website Development</h3>
+                    <p>HTML, CSS, JavaScript fundamentals. Complete guide with 20+ projects.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-file-pdf"></i> 254 KB</span>
+                        <span><i class="fas fa-download" id="downloadCount1">0</i> downloads</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadPDF('website_roadmap.pdf', 1)">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                </div>
+
+                <!-- Web App Development Card -->
+                <div class="roadmap-card" data-pdf="pdfs/webapp_roadmap.pdf">
+                    <div class="card-icon">💻</div>
+                    <h3>Web App Development</h3>
+                    <p>React.js, Node.js, MongoDB. Full-stack JavaScript mastery.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-file-pdf"></i> 151 KB</span>
+                        <span><i class="fas fa-download" id="downloadCount2">0</i> downloads</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadPDF('webapp_roadmap.pdf', 2)">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                </div>
+
+                <!-- Mobile App Development Card -->
+                <div class="roadmap-card" data-pdf="pdfs/Mobile_App_Development.pdf">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>React Native, Expo, iOS & Android. Cross-platform apps.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-file-pdf"></i> 164 KB</span>
+                        <span><i class="fas fa-download" id="downloadCount3">0</i> downloads</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadPDF('Mobile_App_Development.pdf', 3)">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                </div>
+
+                <!-- AI & ML Card -->
+                <div class="roadmap-card" data-pdf="pdfs/Artificial_Intelligence.pdf">
+                    <div class="card-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Python, TensorFlow, OpenAI API. LLMs and Generative AI.</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-file-pdf"></i> 151 KB</span>
+                        <span><i class="fas fa-download" id="downloadCount4">0</i> downloads</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadPDF('Artificial_Intelligence.pdf', 4)">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-code-branch"></i>
+                Featured Projects
+            </h2>
+            <p class="section-subtitle">Some of my work that defies gravity</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3>Developer Roadmaps</h3>
+                    <p>4 comprehensive guides helping 1000+ developers start their careers</p>
+                    <div class="project-tech">
+                        <span>Documentation</span>
+                        <span>Education</span>
+                        <span>Open Source</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Chat Assistant</h3>
+                    <p>Smart chatbot integrated into this portfolio - ask me anything!</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>AI</span>
+                        <span>API</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Cross-Platform Apps</h3>
+                    <p>React Native apps for iOS and Android with shared codebase</p>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Expo</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-envelope"></i>
+                Let's Connect
+            </h2>
+            <p class="section-subtitle">I'm always open to interesting conversations and opportunities</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/aklilut40-code" target="_blank">github.com/aklilut40-code</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="#" target="_blank">linkedin.com/in/aklilutesfay</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:aklilu@example.com">aklilu.tesfay@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <a href="#" target="_blank">@aklilut40</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-toggle" id="chatToggle">
+            <i class="fas fa-comment-dots"></i>
+            <span class="chat-pulse"></span>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <i class="fas fa-robot"></i>
+                <span>Antigravity AI Assistant</span>
+                <button class="chat-close" id="chatClose">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <i class="fas fa-robot"></i>
+                    <div class="message-text">Hi! I'm Aklilu's AI assistant. Ask me about his skills, projects, or developer roadmaps!</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Ask me anything...">
+                <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Aklilu Tesfay | Antigravity AI Portfolio | Built with <i class="fas fa-heart"></i> and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
