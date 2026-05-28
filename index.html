@@ -3,12 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Aklilu Tesfay - Software Engineer Portfolio | Antigravity AI">
+    <meta name="description" content="Aklilu Tesfay - Software Engineer Portfolio | Free Developer Roadmaps | Antigravity AI">
     <meta name="author" content="Aklilu Tesfay">
+    <meta name="keywords" content="Aklilu Tesfay, Software Engineer, Developer Roadmaps, Web Development, AI, Mobile Development">
     <meta name="theme-color" content="#0B0B2A">
-    <title>Aklilu Tesfay | Antigravity AI Portfolio</title>
+    <title>Aklilu Tesfay | Antigravity AI Portfolio | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for profile image and PDF handling */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #6C63FF;
+            box-shadow: 0 0 30px rgba(108, 99, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(108, 99, 255, 0.8);
+        }
+        .download-instruction {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(236, 72, 153, 0.1));
+            border-left: 4px solid #6C63FF;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .download-instruction i {
+            font-size: 2rem;
+            color: #6C63FF;
+        }
+        .download-instruction p {
+            margin: 0;
+            flex: 1;
+        }
+        .download-instruction .steps {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .step {
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .download-btn {
+            animation: bounce 2s ease infinite;
+        }
+        .pdf-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+        .pdf-note a {
+            color: #6C63FF;
+            text-decoration: none;
+        }
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .view-raw-btn {
+            background: rgba(108, 99, 255, 0.2);
+            border: 1px solid #6C63FF;
+            padding: 0.7rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            flex: 1;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .view-raw-btn:hover {
+            background: #6C63FF;
+            transform: translateY(-2px);
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            color: #6C63FF;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+    </style>
 </head>
 <body>
 
@@ -39,6 +151,11 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Profile Image -->
+            <div class="profile-container">
+                <img src="aklilu-profile.png" alt="Aklilu Tesfay - Software Engineer" class="profile-image" onerror="this.src='https://ui-avatars.com/api/?name=Aklilu+Tesfay&background=6C63FF&color=fff&size=180'">
+            </div>
+            
             <div class="glow-icon">
                 <i class="fas fa-brain"></i>
             </div>
@@ -48,16 +165,21 @@
             <p class="hero-subtitle">Software Engineer | Full-Stack Developer | AI Enthusiast</p>
             <p class="hero-description">
                 I build applications that defy gravity - seamless, scalable, and intelligent.
-                Download my free developer roadmaps and start your journey today.
+                Download my <strong>FREE developer roadmaps</strong> below and start your journey today!
             </p>
             <div class="hero-buttons">
                 <a href="#roadmaps" class="btn btn-primary">
-                    <i class="fas fa-download"></i> Download Roadmaps
+                    <i class="fas fa-download"></i> Download Free Roadmaps
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-paper-plane"></i> Contact Me
                 </a>
             </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" onclick="document.getElementById('roadmaps').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -66,66 +188,107 @@
         <div class="container">
             <h2 class="section-title">
                 <i class="fas fa-map"></i>
-                My Developer Roadmaps
+                Free Developer Roadmaps
             </h2>
-            <p class="section-subtitle">Free resources I created to help you become a developer</p>
+            <p class="section-subtitle">Created by me to help you become a developer — 100% FREE to download</p>
+            
+            <!-- Download Instructions Box -->
+            <div class="download-instruction">
+                <i class="fas fa-download"></i>
+                <div>
+                    <strong>📥 How to download:</strong>
+                    <div class="steps">
+                        <span class="step">1️⃣ Click "Download PDF"</span>
+                        <span class="step">2️⃣ Save to your computer</span>
+                        <span class="step">3️⃣ Open with any PDF reader</span>
+                    </div>
+                </div>
+            </div>
             
             <div class="roadmaps-grid" id="roadmapsGrid">
-                <!-- Website Development Card -->
-                <div class="roadmap-card" data-pdf="pdfs/website_roadmap.pdf">
+                <!-- Roadmap 1: Website Development -->
+                <div class="roadmap-card">
                     <div class="card-icon">🌐</div>
                     <h3>Website Development</h3>
-                    <p>HTML, CSS, JavaScript fundamentals. Complete guide with 20+ projects.</p>
+                    <p>Complete guide to modern web development. HTML5, CSS3, JavaScript ES6+, Git, and responsive design. Includes 20+ hands-on projects.</p>
                     <div class="card-stats">
                         <span><i class="fas fa-file-pdf"></i> 254 KB</span>
-                        <span><i class="fas fa-download" id="downloadCount1">0</i> downloads</span>
+                        <span><i class="fas fa-code"></i> 20+ Projects</span>
                     </div>
-                    <button class="download-btn" onclick="downloadPDF('website_roadmap.pdf', 1)">
-                        <i class="fas fa-download"></i> Download PDF
-                    </button>
+                    <div class="button-group">
+                        <a href="pdfs/website_roadmap.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="https://raw.githubusercontent.com/aklilut40-code/antigravity-portfolio/main/pdfs/website_roadmap.pdf" target="_blank" class="view-raw-btn">
+                            <i class="fas fa-eye"></i> View Online
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Web App Development Card -->
-                <div class="roadmap-card" data-pdf="pdfs/webapp_roadmap.pdf">
+                <!-- Roadmap 2: Web App Development -->
+                <div class="roadmap-card">
                     <div class="card-icon">💻</div>
                     <h3>Web App Development</h3>
-                    <p>React.js, Node.js, MongoDB. Full-stack JavaScript mastery.</p>
+                    <p>Full-stack JavaScript mastery. React.js, Node.js, Express, MongoDB, REST APIs, JWT authentication, and deployment.</p>
                     <div class="card-stats">
                         <span><i class="fas fa-file-pdf"></i> 151 KB</span>
-                        <span><i class="fas fa-download" id="downloadCount2">0</i> downloads</span>
+                        <span><i class="fas fa-database"></i> MERN Stack</span>
                     </div>
-                    <button class="download-btn" onclick="downloadPDF('webapp_roadmap.pdf', 2)">
-                        <i class="fas fa-download"></i> Download PDF
-                    </button>
+                    <div class="button-group">
+                        <a href="pdfs/webapp_roadmap.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="https://raw.githubusercontent.com/aklilut40-code/antigravity-portfolio/main/pdfs/webapp_roadmap.pdf" target="_blank" class="view-raw-btn">
+                            <i class="fas fa-eye"></i> View Online
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Mobile App Development Card -->
-                <div class="roadmap-card" data-pdf="pdfs/Mobile_App_Development.pdf">
+                <!-- Roadmap 3: Mobile Development -->
+                <div class="roadmap-card">
                     <div class="card-icon">📱</div>
                     <h3>Mobile Development</h3>
-                    <p>React Native, Expo, iOS & Android. Cross-platform apps.</p>
+                    <p>Cross-platform mobile apps with React Native and Expo. Covers iOS, Android, device features, and app store deployment.</p>
                     <div class="card-stats">
                         <span><i class="fas fa-file-pdf"></i> 164 KB</span>
-                        <span><i class="fas fa-download" id="downloadCount3">0</i> downloads</span>
+                        <span><i class="fas fa-mobile-alt"></i> iOS + Android</span>
                     </div>
-                    <button class="download-btn" onclick="downloadPDF('Mobile_App_Development.pdf', 3)">
-                        <i class="fas fa-download"></i> Download PDF
-                    </button>
+                    <div class="button-group">
+                        <a href="pdfs/Mobile_App_Development.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="https://raw.githubusercontent.com/aklilut40-code/antigravity-portfolio/main/pdfs/Mobile_App_Development.pdf" target="_blank" class="view-raw-btn">
+                            <i class="fas fa-eye"></i> View Online
+                        </a>
+                    </div>
                 </div>
 
-                <!-- AI & ML Card -->
-                <div class="roadmap-card" data-pdf="pdfs/Artificial_Intelligence.pdf">
+                <!-- Roadmap 4: AI & Machine Learning -->
+                <div class="roadmap-card">
                     <div class="card-icon">🤖</div>
                     <h3>AI & Machine Learning</h3>
-                    <p>Python, TensorFlow, OpenAI API. LLMs and Generative AI.</p>
+                    <p>Complete AI/ML guide: Python, NumPy, Pandas, TensorFlow, Scikit-learn, LLMs, OpenAI API, and RAG applications.</p>
                     <div class="card-stats">
                         <span><i class="fas fa-file-pdf"></i> 151 KB</span>
-                        <span><i class="fas fa-download" id="downloadCount4">0</i> downloads</span>
+                        <span><i class="fas fa-microchip"></i> TensorFlow</span>
                     </div>
-                    <button class="download-btn" onclick="downloadPDF('Artificial_Intelligence.pdf', 4)">
-                        <i class="fas fa-download"></i> Download PDF
-                    </button>
+                    <div class="button-group">
+                        <a href="pdfs/Artificial_Intelligence.pdf" download class="download-btn">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="https://raw.githubusercontent.com/aklilut40-code/antigravity-portfolio/main/pdfs/Artificial_Intelligence.pdf" target="_blank" class="view-raw-btn">
+                            <i class="fas fa-eye"></i> View Online
+                        </a>
+                    </div>
                 </div>
+            </div>
+            
+            <!-- PDF Help Note -->
+            <div class="pdf-note">
+                <i class="fas fa-question-circle"></i> 
+                <strong>Can't view PDFs?</strong> Right-click the "View Online" button and select "Save link as..." 
+                or download and open with Adobe Acrobat, Chrome, or Firefox.
+                <a href="#contact">Contact me</a> if you need help!
             </div>
         </div>
     </section>
@@ -143,7 +306,7 @@
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-chalkboard-user"></i></div>
                     <h3>Developer Roadmaps</h3>
-                    <p>4 comprehensive guides helping 1000+ developers start their careers</p>
+                    <p>4 comprehensive guides that have helped 1,000+ developers start their careers in web, mobile, and AI development.</p>
                     <div class="project-tech">
                         <span>Documentation</span>
                         <span>Education</span>
@@ -153,19 +316,19 @@
 
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-robot"></i></div>
-                    <h3>AI Chat Assistant</h3>
-                    <p>Smart chatbot integrated into this portfolio - ask me anything!</p>
+                    <h3>Antigravity AI Assistant</h3>
+                    <p>Smart chatbot integrated into this portfolio. Ask me anything about my skills, experience, or developer roadmaps!</p>
                     <div class="project-tech">
                         <span>JavaScript</span>
                         <span>AI</span>
-                        <span>API</span>
+                        <span>NLP</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Cross-Platform Apps</h3>
-                    <p>React Native apps for iOS and Android with shared codebase</p>
+                    <p>React Native applications for iOS and Android with shared codebase, offline support, and real-time sync.</p>
                     <div class="project-tech">
                         <span>React Native</span>
                         <span>Expo</span>
@@ -197,19 +360,25 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:aklilu@example.com">aklilu.tesfay@example.com</a>
+                        <a href="mailto:aklilu.tesfay@example.com">aklilu.tesfay@example.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-twitter"></i>
                         <a href="#" target="_blank">@aklilut40</a>
                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://github.com/aklilut40-code" target="_blank">github.com/aklilut40-code</a>
+                    </div>
                 </div>
                 
                 <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="4" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <input type="text" placeholder="Your Name" required id="contactName">
+                    <input type="email" placeholder="Your Email" required id="contactEmail">
+                    <textarea rows="4" placeholder="Your Message" required id="contactMessage"></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
                 </form>
             </div>
         </div>
@@ -230,7 +399,11 @@
             <div class="chat-messages" id="chatMessages">
                 <div class="message bot">
                     <i class="fas fa-robot"></i>
-                    <div class="message-text">Hi! I'm Aklilu's AI assistant. Ask me about his skills, projects, or developer roadmaps!</div>
+                    <div class="message-text">👋 Hi! I'm Aklilu's AI assistant. Ask me about:<br>
+                    • His skills and experience<br>
+                    • The developer roadmaps<br>
+                    • His projects<br>
+                    • How to contact him</div>
                 </div>
             </div>
             <div class="chat-input">
@@ -242,7 +415,10 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Aklilu Tesfay | Antigravity AI Portfolio | Built with <i class="fas fa-heart"></i> and JavaScript</p>
+        <p>&copy; 2026 Aklilu Tesfay | <i class="fas fa-rocket"></i> Antigravity AI Portfolio | Built with <i class="fas fa-heart"></i> and JavaScript</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">
+            <a href="#home" style="color: #6C63FF; text-decoration: none;">Back to Top</a>
+        </p>
     </footer>
 
     <script src="script.js"></script>
