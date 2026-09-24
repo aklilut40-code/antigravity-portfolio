@@ -133,7 +133,8 @@ Contributions are welcome if you want to improve the design, add new sections, e
 
 For inquiries or collaboration, you can connect through the contact section of the portfolio or visit the repository owner profile:
 
-- GitHub: https://github.com/aklilut40-code
+
+- GitHublink:antigravity-portfolio-fawn.vercel.app
 
 ## Summary
 
