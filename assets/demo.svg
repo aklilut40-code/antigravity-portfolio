@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="550">
+  <rect width="100%" height="100%" fill="#0b1226" rx="10"/>
+  <g>
+    <rect x="40" y="40" width="260" height="160" rx="8" fill="#0f1724"/>
+    <text x="320" y="90" font-family="Inter, Arial, Helvetica" font-size="28" fill="#ffffff">AntiGravity — Demo Preview</text>
+    <text x="320" y="120" font-family="Inter, Arial" font-size="14" fill="#9aa0b4">Interactive visuals • Bento-grid portfolio</text>
+    <g transform="translate(40,230)">
+      <rect width="900" height="280" rx="10" fill="#7c3aed"/>
+      <text x="40" y="160" font-family="Inter, Arial" font-size="36" fill="#fff">Clean, fast, and experimental</text>
+    </g>
+  </g>
+</svg>

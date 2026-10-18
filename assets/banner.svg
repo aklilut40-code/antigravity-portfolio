@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a4"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" rx="12"/>
+  <text x="60" y="90" font-family="Inter, Arial, Helvetica, sans-serif" font-size="48" fill="white">AntiGravity</text>
+  <text x="60" y="150" font-family="Inter, Arial, Helvetica, sans-serif" font-size="20" fill="rgba(255,255,255,0.95)">Portfolio • Interactive • Visuals</text>
+</svg>
